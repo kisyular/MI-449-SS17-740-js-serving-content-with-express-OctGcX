@@ -1,0 +1,33 @@
+{
+  "name": "Express-project",
+  "browser": true,
+  "version": "1.0.0",
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "indentation": 2
+    }
+  },
+  "scripts": {
+    "dev": "run-p dev:server dev:sass-watch build:sass",
+    "lint:stylelint": "stylelint public/source/scss/*.scss",
+    "lint:htmlhint": "htmlhint index.html",
+    "lint:standard": "standard js/*.js",
+    "dev:server": "node server.js",
+    "dev:sass-watch": "node-sass public/source/scss/style.scss --watch --output=public/compiled/css --output-style=compressed --source-map=true",
+    "build:sass": "node-sass public/source/scss/style.scss --output=public/compiled/css --output-style=compressed --source-map=true",
+    "deploy:surge": "surge --project . --domain kisyular-kg-tgc7noax99ajvzzg.surge.sh",
+    "deploy": "run-s lint:* build:* deploy:surge"
+  },
+  "devDependencies": {
+    "express": "^4.15.2",
+    "htmlhint": "^0.9.13",
+    "live-server": "^1.2.0",
+    "node-sass": "^4.5.2",
+    "npm-run-all": "^4.0.2",
+    "standard": "^10.0.0",
+    "stylelint-config-standard": "^16.0.0",
+    "surge": "^0.19.0",
+    "ejs": "^2.5.6"
+  }
+}
