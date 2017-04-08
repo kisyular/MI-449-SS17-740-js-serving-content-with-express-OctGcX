@@ -16,8 +16,8 @@
     "dev:server": "node server.js",
     "dev:sass-watch": "node-sass public/source/scss/style.scss --watch --output=public/compiled/css --output-style=compressed --source-map=true",
     "build:sass": "node-sass public/source/scss/style.scss --output=public/compiled/css --output-style=compressed --source-map=true",
-    "deploy:surge": "surge --project . --domain kisyular-kg-tgc7noax99ajvzzg.surge.sh",
-    "deploy": "run-s lint:* build:* deploy:surge"
+    "deploy": "run-s lint:* build:* push:heroku",
+    "push:heroku": "heroku create kisyular-kfxl35erbteu5octgcx"
   },
   "devDependencies": {
     "express": "^4.15.2",
