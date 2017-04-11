@@ -2,6 +2,10 @@
   "name": "Express-project",
   "browser": true,
   "version": "1.0.0",
+  "description": "A sample Node.js app using Express 4",
+  "engines": {
+    "node": "5.9.1"
+  },
   "stylelint": {
     "extends": "stylelint-config-standard",
     "rules": {
@@ -17,17 +21,19 @@
     "dev:sass-watch": "node-sass public/source/scss/style.scss --watch --output=public/compiled/css --output-style=compressed --source-map=true",
     "build:sass": "node-sass public/source/scss/style.scss --output=public/compiled/css --output-style=compressed --source-map=true",
     "deploy": "run-s lint:* build:* push:heroku",
-    "push:heroku": "heroku create kisyular-kfxl35erbteu5octgcx"
+    "push:heroku": "git push heroku master"
   },
   "devDependencies": {
+    "ejs": "^2.5.6",
     "express": "^4.15.2",
     "htmlhint": "^0.9.13",
     "live-server": "^1.2.0",
     "node-sass": "^4.5.2",
     "npm-run-all": "^4.0.2",
     "standard": "^10.0.0",
-    "stylelint-config-standard": "^16.0.0",
-    "surge": "^0.19.0",
-    "ejs": "^2.5.6"
+    "stylelint-config-standard": "^16.0.0"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
   }
 }
