@@ -24,7 +24,6 @@
     "push:heroku": "git push heroku master"
   },
   "devDependencies": {
-
     "express": "^4.15.2",
     "htmlhint": "^0.9.13",
     "live-server": "^1.2.0",
