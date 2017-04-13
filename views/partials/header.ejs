@@ -29,10 +29,10 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
 
-          <% Object.keys(navigationLink).forEach(function (id) { %>
+          <% Object.keys(language).forEach(function (id) { %>
             <li>
-              <a href="<%= navigationLink[id].content %>">
-                <%= navigationLink[id].title %>
+              <a href="pages/<%= language[id]['PageUrl']%>">
+                <%= language[id].title %>
               </a>
             </li>
             <% }) %>
